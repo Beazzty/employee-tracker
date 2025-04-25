@@ -1,6 +1,25 @@
 {
   "dependencies": {
+    "dotenv": "^16.5.0",
     "inquirer": "^8.2.4",
     "pg": "^8.15.0"
-  }
+  },
+  "name": "challenge-10",
+  "version": "1.0.0",
+  "description": "## Your Task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beazzty/employee-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Beazzty/employee-tracker/issues"
+  },
+  "homepage": "https://github.com/Beazzty/employee-tracker#readme"
 }
