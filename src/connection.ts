@@ -2,7 +2,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 //import and require pool (node-postgres)
-// we will be creating a Connection Pool. Read up on it here: https://node-postgres.com/features/pooling
 
 import { Pool } from 'pg';
 
