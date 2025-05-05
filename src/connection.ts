@@ -17,12 +17,12 @@ const pool = new Pool({
 
 const connectToDB = async () => {
     try {
-        await pool.connect();
-        console.log('Connected to the database successfully');
+       const client = await pool.connect();
+       client.release();
+       console.log("Connected to the database successfully.");
     } catch (error) {
-        console.error('Error connecting to the database:', error);
-        throw error; // rethrow the error for further handling if needed
+       console.error("Error connecting to the database:", error);
     }
-    };
+};
 
     export { pool, connectToDB };
