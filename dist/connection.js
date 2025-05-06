@@ -1,23 +1,18 @@
-import dotenv from 'dotenv';
-dotenv.config();
-// import pg package
-import pg from 'pg';
-const { Pool } = pg;
-const pool = new Pool({
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
+import { Pool } from 'pg';
+
+export const pool = new Pool({
+    user: 'your_username',
     host: 'localhost',
-    database: process.env.DB_NAME,
+    database: 'your_database',
+    password: 'your_password',
     port: 5432,
 });
-const connectToDb = async () => {
+
+export const connectToDb = async () => {
     try {
         await pool.connect();
-        console.log('Connected to the database.');
-    }
-    catch (err) {
-        console.error('Error connecting to database:', err);
-        process.exit(1);
+        console.log('Connected to the database');
+    } catch (err) {
+        console.error('Failed to connect to the database', err);
     }
 };
-export { pool, connectToDb };
